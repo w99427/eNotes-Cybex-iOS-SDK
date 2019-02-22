@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Card : NSObject
 //这个key就是acitvePublickKey
 @property NSString *blockchainPublicKey;
+@property NSString *masterPublicKey;
 @property NSString *derivePrivatekey;
 @property NSString *deriveNonce;
 @property NSString *deriveDigest;

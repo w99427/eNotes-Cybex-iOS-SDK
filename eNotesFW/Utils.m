@@ -76,6 +76,7 @@
     NSDictionary *tlvIdc = [tlvBox parse:data];
     NSLog(@"%@",tlvIdc.allKeys);
     NSString* blockChainPublicKey = [Utils hexDataToHexStr:[tlvIdc objectForKey:[Utils hexStringToHexData:BlockChain_PublicKey]]];
+    NSString* masterPublicKey = [Utils hexDataToHexStr:[tlvIdc objectForKey:[Utils hexStringToHexData:Master_PublicKey]]];
     NSString* derivePrivatekey = [Utils hexDataToHexStr:[tlvIdc objectForKey:[Utils hexStringToHexData:SlavePrivateKey]]];
     NSString* keyDeriveNonce = [Utils hexDataToHexStr:[tlvIdc objectForKey:[Utils hexStringToHexData:KeyDeriveNonce]]];
     NSString* keyDeriveDigest = [Utils hexDataToHexStr:[tlvIdc objectForKey:[Utils hexStringToHexData:KeyDeriveDigest]]];
@@ -84,6 +85,7 @@
     NSString* account = [[NSString alloc] initWithData:[tlvIdc objectForKey:[Utils hexStringToHexData:Account]] encoding:NSUTF8StringEncoding];
     
     card.blockchainPublicKey=blockChainPublicKey;
+    card.masterPublicKey=masterPublicKey;
     card.derivePrivatekey=derivePrivatekey;
     card.deriveNonce=keyDeriveNonce;
     card.deriveDigest=keyDeriveDigest;
