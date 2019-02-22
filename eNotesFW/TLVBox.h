@@ -12,6 +12,7 @@
 
 
 #define  Device_Certificate @"30"
+#define  Account @"32"
 #define  BlockChain_PublicKey @"55"
 #define  SlavePrivateKey @"58"
 #define  KeyDeriveNonce  @"74"

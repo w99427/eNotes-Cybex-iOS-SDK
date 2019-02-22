@@ -59,38 +59,38 @@
 
 + (Card *)parseNDEFMessage:(NSArray<NFCNDEFMessage *> *)messages
 {
-    Card* card=[[Card alloc] init];
     for (NFCNDEFMessage *message in messages) {
         NSArray<NFCNDEFPayload *>* mRecords = message.records;
         if(mRecords.count==3){
             NFCNDEFPayload* payload = [mRecords objectAtIndex:2];
-            TLVBox* tlvBox = [[TLVBox alloc] init];
-            NSDictionary *tlvIdc = [tlvBox parse:payload.payload];
-            NSLog(@"%@",tlvIdc.allKeys);
-            NSString* blockChainPublicKey = [Utils hexDataToHexStr:[tlvIdc objectForKey:[Utils hexStringToHexData:BlockChain_PublicKey]]];
-            NSString* derivePrivatekey = [Utils hexDataToHexStr:[tlvIdc objectForKey:[Utils hexStringToHexData:SlavePrivateKey]]];
-            NSString* keyDeriveNonce = [Utils hexDataToHexStr:[tlvIdc objectForKey:[Utils hexStringToHexData:KeyDeriveNonce]]];
-            NSString* keyDeriveDigest = [Utils hexDataToHexStr:[tlvIdc objectForKey:[Utils hexStringToHexData:KeyDeriveDigest]]];
-            NSString* keyDeriveSignature = [Utils hexDataToHexStr:[tlvIdc objectForKey:[Utils hexStringToHexData:KeyDeriveSignature]]];
-            NSString* device_Certificate = [Utils hexDataToHexStr:[tlvIdc objectForKey:[Utils hexStringToHexData:Device_Certificate]]];
-          
-//            NSLog(@"%@",blockChainPublicKey);
-//            NSLog(@"%@",blockChainPrivateKey);
-//            NSLog(@"%@",keyDeriveNonce);
-//            NSLog(@"%@",keyDeriveDigest);
-//            NSLog(@"%@",keyDeriveSignature);
-//            NSLog(@"%@",device_Certificate);
-            card.blockchainPublicKey=blockChainPublicKey;
-            card.derivePrivatekey=derivePrivatekey;
-            card.deriveNonce=keyDeriveNonce;
-            card.deriveDigest=keyDeriveDigest;
-            card.deriveSignature=keyDeriveSignature;
-            card.certificate=device_Certificate;
-            
-            
-            return card;
+            return [Utils parseData:payload.payload];
         }
     }
     return nil;
+}
+
++ (Card *)parseData:(NSData *)data
+{
+    Card* card=[[Card alloc] init];
+    TLVBox* tlvBox = [[TLVBox alloc] init];
+    NSDictionary *tlvIdc = [tlvBox parse:data];
+    NSLog(@"%@",tlvIdc.allKeys);
+    NSString* blockChainPublicKey = [Utils hexDataToHexStr:[tlvIdc objectForKey:[Utils hexStringToHexData:BlockChain_PublicKey]]];
+    NSString* derivePrivatekey = [Utils hexDataToHexStr:[tlvIdc objectForKey:[Utils hexStringToHexData:SlavePrivateKey]]];
+    NSString* keyDeriveNonce = [Utils hexDataToHexStr:[tlvIdc objectForKey:[Utils hexStringToHexData:KeyDeriveNonce]]];
+    NSString* keyDeriveDigest = [Utils hexDataToHexStr:[tlvIdc objectForKey:[Utils hexStringToHexData:KeyDeriveDigest]]];
+    NSString* keyDeriveSignature = [Utils hexDataToHexStr:[tlvIdc objectForKey:[Utils hexStringToHexData:KeyDeriveSignature]]];
+    NSString* device_Certificate = [Utils hexDataToHexStr:[tlvIdc objectForKey:[Utils hexStringToHexData:Device_Certificate]]];
+    NSString* account = [[NSString alloc] initWithData:[tlvIdc objectForKey:[Utils hexStringToHexData:Account]] encoding:NSUTF8StringEncoding];
+    
+    card.blockchainPublicKey=blockChainPublicKey;
+    card.derivePrivatekey=derivePrivatekey;
+    card.deriveNonce=keyDeriveNonce;
+    card.deriveDigest=keyDeriveDigest;
+    card.deriveSignature=keyDeriveSignature;
+    card.certificate=device_Certificate;
+    card.account=account;
+    
+    return card;
 }
 @end

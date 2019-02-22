@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSString *deriveDigest;
 @property NSString *deriveSignature;
 @property NSString *certificate;
+@property NSString *account;
 @end
 
 NS_ASSUME_NONNULL_END

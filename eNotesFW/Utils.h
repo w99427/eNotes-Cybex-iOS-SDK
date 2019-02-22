@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)hexDataToHexStr:(NSData *)hexData;
 + (NSString *)dataToBase64Str: (NSData *)data;
 + (Card *)parseNDEFMessage:(NSArray<NFCNDEFMessage *> *)messages;
++ (Card *)parseData:(NSData *)data;
 @end
 
 NS_ASSUME_NONNULL_END
