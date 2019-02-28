@@ -7,29 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57132CD1221EA2E700A41B2F /* eNotesFW.h in Headers */ = {isa = PBXBuildFile; fileRef = 57132CCF221EA2E700A41B2F /* eNotesFW.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		57132CDD221EA50700A41B2F /* TLVBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 57132CD7221EA50600A41B2F /* TLVBox.m */; };
-		57132CDE221EA50700A41B2F /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 57132CD8221EA50600A41B2F /* Card.m */; };
-		57132CDF221EA50700A41B2F /* TLVBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 57132CD9221EA50600A41B2F /* TLVBox.h */; };
-		57132CE0221EA50700A41B2F /* Card.h in Headers */ = {isa = PBXBuildFile; fileRef = 57132CDA221EA50600A41B2F /* Card.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		57132CE1221EA50700A41B2F /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 57132CDB221EA50700A41B2F /* Utils.m */; };
-		57132CE2221EA50700A41B2F /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 57132CDC221EA50700A41B2F /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57132D33222636BA00A41B2F /* eNotesFW.h in Headers */ = {isa = PBXBuildFile; fileRef = 57132D31222636BA00A41B2F /* eNotesFW.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57132D552227D31500A41B2F /* eNotesFW-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 57132D542227D31500A41B2F /* eNotesFW-Bridging-Header.h */; };
+		57132D622227D3A500A41B2F /* Data+Extension1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D562227D3A400A41B2F /* Data+Extension1.swift */; };
+		57132D632227D3A500A41B2F /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D572227D3A400A41B2F /* Array+Extension.swift */; };
+		57132D642227D3A500A41B2F /* ASN1Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D582227D3A400A41B2F /* ASN1Identifier.swift */; };
+		57132D652227D3A500A41B2F /* Asn1Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D592227D3A400A41B2F /* Asn1Decoder.swift */; };
+		57132D662227D3A500A41B2F /* Tlv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D5A2227D3A400A41B2F /* Tlv.swift */; };
+		57132D672227D3A500A41B2F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D5B2227D3A400A41B2F /* Card.swift */; };
+		57132D682227D3A500A41B2F /* TlvTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D5C2227D3A400A41B2F /* TlvTag.swift */; };
+		57132D692227D3A500A41B2F /* ASN1Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D5D2227D3A400A41B2F /* ASN1Object.swift */; };
+		57132D6A2227D3A500A41B2F /* Cert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D5E2227D3A400A41B2F /* Cert.swift */; };
+		57132D6B2227D3A500A41B2F /* CertificateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D5F2227D3A500A41B2F /* CertificateParser.swift */; };
+		57132D6C2227D3A500A41B2F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D602227D3A500A41B2F /* Utils.swift */; };
+		57132D6D2227D3A500A41B2F /* X509Certificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D612227D3A500A41B2F /* X509Certificate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		57132CCC221EA2E700A41B2F /* eNotesFW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = eNotesFW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		57132CCF221EA2E700A41B2F /* eNotesFW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = eNotesFW.h; sourceTree = "<group>"; };
-		57132CD0221EA2E700A41B2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		57132CD7221EA50600A41B2F /* TLVBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLVBox.m; sourceTree = "<group>"; };
-		57132CD8221EA50600A41B2F /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
-		57132CD9221EA50600A41B2F /* TLVBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLVBox.h; sourceTree = "<group>"; };
-		57132CDA221EA50600A41B2F /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
-		57132CDB221EA50700A41B2F /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
-		57132CDC221EA50700A41B2F /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		57132D2E222636BA00A41B2F /* eNotesFW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = eNotesFW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57132D31222636BA00A41B2F /* eNotesFW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = eNotesFW.h; sourceTree = "<group>"; };
+		57132D32222636BA00A41B2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57132D542227D31500A41B2F /* eNotesFW-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "eNotesFW-Bridging-Header.h"; sourceTree = "<group>"; };
+		57132D562227D3A400A41B2F /* Data+Extension1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Extension1.swift"; sourceTree = "<group>"; };
+		57132D572227D3A400A41B2F /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Extension.swift"; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/Array+Extension.swift"; sourceTree = "<group>"; };
+		57132D582227D3A400A41B2F /* ASN1Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ASN1Identifier.swift; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/ASN1Identifier.swift"; sourceTree = "<group>"; };
+		57132D592227D3A400A41B2F /* Asn1Decoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Asn1Decoder.swift; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/Asn1Decoder.swift"; sourceTree = "<group>"; };
+		57132D5A2227D3A400A41B2F /* Tlv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tlv.swift; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/Tlv.swift"; sourceTree = "<group>"; };
+		57132D5B2227D3A400A41B2F /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Card.swift; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/Card.swift"; sourceTree = "<group>"; };
+		57132D5C2227D3A400A41B2F /* TlvTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TlvTag.swift; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/TlvTag.swift"; sourceTree = "<group>"; };
+		57132D5D2227D3A400A41B2F /* ASN1Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ASN1Object.swift; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/ASN1Object.swift"; sourceTree = "<group>"; };
+		57132D5E2227D3A400A41B2F /* Cert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cert.swift; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/Cert.swift"; sourceTree = "<group>"; };
+		57132D5F2227D3A500A41B2F /* CertificateParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CertificateParser.swift; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/CertificateParser.swift"; sourceTree = "<group>"; };
+		57132D602227D3A500A41B2F /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/Utils.swift"; sourceTree = "<group>"; };
+		57132D612227D3A500A41B2F /* X509Certificate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = X509Certificate.swift; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/X509Certificate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		57132CC9221EA2E700A41B2F /* Frameworks */ = {
+		57132D2B222636BA00A41B2F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,33 +53,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		57132CC2221EA2E700A41B2F = {
+		57132D24222636BA00A41B2F = {
 			isa = PBXGroup;
 			children = (
-				57132CCE221EA2E700A41B2F /* eNotesFW */,
-				57132CCD221EA2E700A41B2F /* Products */,
+				57132D30222636BA00A41B2F /* eNotesFW */,
+				57132D2F222636BA00A41B2F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		57132CCD221EA2E700A41B2F /* Products */ = {
+		57132D2F222636BA00A41B2F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				57132CCC221EA2E700A41B2F /* eNotesFW.framework */,
+				57132D2E222636BA00A41B2F /* eNotesFW.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		57132CCE221EA2E700A41B2F /* eNotesFW */ = {
+		57132D30222636BA00A41B2F /* eNotesFW */ = {
 			isa = PBXGroup;
 			children = (
-				57132CDA221EA50600A41B2F /* Card.h */,
-				57132CD8221EA50600A41B2F /* Card.m */,
-				57132CD9221EA50600A41B2F /* TLVBox.h */,
-				57132CD7221EA50600A41B2F /* TLVBox.m */,
-				57132CDC221EA50700A41B2F /* Utils.h */,
-				57132CDB221EA50700A41B2F /* Utils.m */,
-				57132CCF221EA2E700A41B2F /* eNotesFW.h */,
-				57132CD0221EA2E700A41B2F /* Info.plist */,
+				57132D572227D3A400A41B2F /* Array+Extension.swift */,
+				57132D592227D3A400A41B2F /* Asn1Decoder.swift */,
+				57132D582227D3A400A41B2F /* ASN1Identifier.swift */,
+				57132D5D2227D3A400A41B2F /* ASN1Object.swift */,
+				57132D5B2227D3A400A41B2F /* Card.swift */,
+				57132D5E2227D3A400A41B2F /* Cert.swift */,
+				57132D5F2227D3A500A41B2F /* CertificateParser.swift */,
+				57132D562227D3A400A41B2F /* Data+Extension1.swift */,
+				57132D5A2227D3A400A41B2F /* Tlv.swift */,
+				57132D5C2227D3A400A41B2F /* TlvTag.swift */,
+				57132D602227D3A500A41B2F /* Utils.swift */,
+				57132D612227D3A500A41B2F /* X509Certificate.swift */,
+				57132D542227D31500A41B2F /* eNotesFW-Bridging-Header.h */,
+				57132D31222636BA00A41B2F /* eNotesFW.h */,
+				57132D32222636BA00A41B2F /* Info.plist */,
 			);
 			path = eNotesFW;
 			sourceTree = "<group>";
@@ -73,28 +94,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		57132CC7221EA2E700A41B2F /* Headers */ = {
+		57132D29222636BA00A41B2F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57132CD1221EA2E700A41B2F /* eNotesFW.h in Headers */,
-				57132CE2221EA50700A41B2F /* Utils.h in Headers */,
-				57132CE0221EA50700A41B2F /* Card.h in Headers */,
-				57132CDF221EA50700A41B2F /* TLVBox.h in Headers */,
+				57132D552227D31500A41B2F /* eNotesFW-Bridging-Header.h in Headers */,
+				57132D33222636BA00A41B2F /* eNotesFW.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		57132CCB221EA2E700A41B2F /* eNotesFW */ = {
+		57132D2D222636BA00A41B2F /* eNotesFW */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 57132CD4221EA2E700A41B2F /* Build configuration list for PBXNativeTarget "eNotesFW" */;
+			buildConfigurationList = 57132D36222636BA00A41B2F /* Build configuration list for PBXNativeTarget "eNotesFW" */;
 			buildPhases = (
-				57132CC7221EA2E700A41B2F /* Headers */,
-				57132CC8221EA2E700A41B2F /* Sources */,
-				57132CC9221EA2E700A41B2F /* Frameworks */,
-				57132CCA221EA2E700A41B2F /* Resources */,
+				57132D29222636BA00A41B2F /* Headers */,
+				57132D2A222636BA00A41B2F /* Sources */,
+				57132D2B222636BA00A41B2F /* Frameworks */,
+				57132D2C222636BA00A41B2F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -102,42 +121,43 @@
 			);
 			name = eNotesFW;
 			productName = eNotesFW;
-			productReference = 57132CCC221EA2E700A41B2F /* eNotesFW.framework */;
+			productReference = 57132D2E222636BA00A41B2F /* eNotesFW.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		57132CC3221EA2E700A41B2F /* Project object */ = {
+		57132D25222636BA00A41B2F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = enotes;
 				TargetAttributes = {
-					57132CCB221EA2E700A41B2F = {
+					57132D2D222636BA00A41B2F = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
-			buildConfigurationList = 57132CC6221EA2E700A41B2F /* Build configuration list for PBXProject "eNotesFW" */;
+			buildConfigurationList = 57132D28222636BA00A41B2F /* Build configuration list for PBXProject "eNotesFW" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 57132CC2221EA2E700A41B2F;
-			productRefGroup = 57132CCD221EA2E700A41B2F /* Products */;
+			mainGroup = 57132D24222636BA00A41B2F;
+			productRefGroup = 57132D2F222636BA00A41B2F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				57132CCB221EA2E700A41B2F /* eNotesFW */,
+				57132D2D222636BA00A41B2F /* eNotesFW */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		57132CCA221EA2E700A41B2F /* Resources */ = {
+		57132D2C222636BA00A41B2F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -147,20 +167,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		57132CC8221EA2E700A41B2F /* Sources */ = {
+		57132D2A222636BA00A41B2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57132CE1221EA50700A41B2F /* Utils.m in Sources */,
-				57132CDD221EA50700A41B2F /* TLVBox.m in Sources */,
-				57132CDE221EA50700A41B2F /* Card.m in Sources */,
+				57132D672227D3A500A41B2F /* Card.swift in Sources */,
+				57132D622227D3A500A41B2F /* Data+Extension1.swift in Sources */,
+				57132D652227D3A500A41B2F /* Asn1Decoder.swift in Sources */,
+				57132D682227D3A500A41B2F /* TlvTag.swift in Sources */,
+				57132D6B2227D3A500A41B2F /* CertificateParser.swift in Sources */,
+				57132D692227D3A500A41B2F /* ASN1Object.swift in Sources */,
+				57132D6C2227D3A500A41B2F /* Utils.swift in Sources */,
+				57132D6D2227D3A500A41B2F /* X509Certificate.swift in Sources */,
+				57132D632227D3A500A41B2F /* Array+Extension.swift in Sources */,
+				57132D662227D3A500A41B2F /* Tlv.swift in Sources */,
+				57132D642227D3A500A41B2F /* ASN1Identifier.swift in Sources */,
+				57132D6A2227D3A500A41B2F /* Cert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		57132CD2221EA2E700A41B2F /* Debug */ = {
+		57132D34222636BA00A41B2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -217,12 +246,14 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		57132CD3221EA2E700A41B2F /* Release */ = {
+		57132D35222636BA00A41B2F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -272,15 +303,18 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		57132CD5221EA2E700A41B2F /* Debug */ = {
+		57132D37222636BA00A41B2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -295,18 +329,19 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = io.enotes.eNotesFW;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		57132CD6221EA2E700A41B2F /* Release */ = {
+		57132D38222636BA00A41B2F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -321,11 +356,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = io.enotes.eNotesFW;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -333,25 +367,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		57132CC6221EA2E700A41B2F /* Build configuration list for PBXProject "eNotesFW" */ = {
+		57132D28222636BA00A41B2F /* Build configuration list for PBXProject "eNotesFW" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				57132CD2221EA2E700A41B2F /* Debug */,
-				57132CD3221EA2E700A41B2F /* Release */,
+				57132D34222636BA00A41B2F /* Debug */,
+				57132D35222636BA00A41B2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		57132CD4221EA2E700A41B2F /* Build configuration list for PBXNativeTarget "eNotesFW" */ = {
+		57132D36222636BA00A41B2F /* Build configuration list for PBXNativeTarget "eNotesFW" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				57132CD5221EA2E700A41B2F /* Debug */,
-				57132CD6221EA2E700A41B2F /* Release */,
+				57132D37222636BA00A41B2F /* Debug */,
+				57132D38222636BA00A41B2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 57132CC3221EA2E700A41B2F /* Project object */;
+	rootObject = 57132D25222636BA00A41B2F /* Project object */;
 }

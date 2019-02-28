@@ -2,13 +2,12 @@
 //  eNotesFW.h
 //  eNotesFW
 //
-//  Created by Victor Xu on 2019/2/21.
+//  Created by Victor Xu on 2019/2/27.
 //  Copyright © 2019 enotes. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "Utils.h"
-#import "Card.h"
+
 //! Project version number for eNotesFW.
 FOUNDATION_EXPORT double eNotesFWVersionNumber;
 
