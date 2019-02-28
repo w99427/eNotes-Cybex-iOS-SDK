@@ -1,9 +1,9 @@
 //
-//  Data+Extension.swift
-//  eNotesSdk
+//  Card.swift
+//  eNotes
 //
-//  Created by Smiacter on 2018/9/28.
-//  Copyright © 2018 eNotes. All rights reserved.
+//  Created by Smiacter on 2018/8/16.
+//  Copyright © 2018 Smiacter. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -24,32 +24,18 @@
 //  THE SOFTWARE.
 //
 import Foundation
-extension Data {
-    
-    public func subdata(in range: CountableClosedRange<Data.Index>) -> Data
-    {
-        return self.subdata(in: range.lowerBound..<range.upperBound + 1)
-    }
-}
 
-extension Data {
+public struct Card {
+    //这个key就是acitvePublickKey
+    public var blockchainPublicKey = ""
+    public var oneTimePrivateKey = ""
+    public var oneTimePublicKey = ""
+    public var oneTimeNonce = ""
+    public var oneTimeSignature = ""
+    public var oneTimeSignatureChecksum = 0
+    public var oneTimePrivateKeyChecksum = 0
+    public var account = ""
+    public var transactionPinStatus = ""
+    public var cert = Cert()
     
-    public init(hex: String) {
-        self.init(bytes: Array<UInt8>(hex: hex))
-    }
-    
-    public var bytes: Array<UInt8> {
-        return Array(self)
-    }
-    
-//    public func toHexString() -> String {
-//        return bytes.toHexString()
-//    }
-}
-
-extension Data {
-    
-    public func toBase64String() -> String {
-        return self.base64EncodedString(options: .endLineWithLineFeed)
-    }
 }
