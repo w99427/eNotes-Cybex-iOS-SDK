@@ -8,6 +8,10 @@
 
 import Foundation
 import CoreNFC
+import CommonCrypto
+import secp256k1_ios
+import BigInt
+
 
 public class Utils:NSObject{
     
@@ -25,19 +29,20 @@ public class Utils:NSObject{
     
     public static func parseNDEFData(data:Data) -> Card{
         var card = Card()
+        let tag = TlvTag()
         let tlv = Tlv.decode(data: data)
-        let blockchainPublicKey = tlv[Data(hex: BlockChain_PublicKey)]?.hexEncodedString()
-        let oneTimePrivateKeyData = tlv[Data(hex: OneTime_PrivateKey)]
+        let blockchainPublicKey = tlv[Data(hex: tag.BlockChain_PublicKey)]?.hexEncodedString()
+        let oneTimePrivateKeyData = tlv[Data(hex: tag.OneTime_PrivateKey)]
         let oneTimePrivateKey = oneTimePrivateKeyData?.hexEncodedString()
-        let oneTimePublicKey = tlv[Data(hex: OneTime_PublicKey)]?.hexEncodedString()
-        let oneTimeNonce = tlv[Data(hex: OneTime_Nonce)]?.hexEncodedString()
-        let oneTimeSignatureData = tlv[Data(hex: OneTime_Signature)]
+        let oneTimePublicKey = tlv[Data(hex: tag.OneTime_PublicKey)]?.hexEncodedString()
+        var oneTimeNonce = tlv[Data(hex: tag.OneTime_Nonce)]?.hexEncodedString()
+        let oneTimeSignatureData = tlv[Data(hex: tag.OneTime_Signature)]
         let oneTimeSignature = oneTimeSignatureData?.hexEncodedString()
-        let accountData = tlv[Data(hex: Account)]
-        let certificate = tlv[Data(hex: Device_Certificate)]
-        let transactionPinStatus = tlv[Data(hex: TransactionPinStatus)]?.hexEncodedString()
-        let oneTimeSignatureChecksumData = tlv[Data(hex: OneTime_SignatureChecksum)]
-        let oneTimePrivateKeyChecksumData = tlv[Data(hex: OneTime_PrivateKeyChecksum)]
+        let accountData = tlv[Data(hex: tag.Account)]
+        let certificate = tlv[Data(hex: tag.Device_Certificate)]
+        let transactionPinStatus = tlv[Data(hex: tag.TransactionPinStatus)]?.toInt()
+        let oneTimeSignatureChecksumData = tlv[Data(hex: tag.OneTime_SignatureChecksum)]
+        let oneTimePrivateKeyChecksumData = tlv[Data(hex: tag.OneTime_PrivateKeyChecksum)]
         let oneTimeSignatureChecksum = oneTimeSignatureChecksumData?.toInt()
         let oneTimePrivateKeyChecksum = oneTimePrivateKeyChecksumData?.toInt()
         let parser = CertificateParser(hexCert: certificate!.toBase64String())
@@ -57,6 +62,19 @@ public class Utils:NSObject{
         card.transactionPinStatus = transactionPinStatus!
         card.cert = cert
         
+        if(transactionPinStatus==0){
+            
+            let r = (oneTimeSignature! as NSString).substring(to: 64)
+            let s = (oneTimeSignature! as NSString).substring(with: NSMakeRange(64, 128))
+            
+            card.r = r
+            card.s = toCanonicalised(s: s)
+            card.recId = getRecId(oneTimeNonce: oneTimeNonce!, r: r, s: s, onTimePublicKey: oneTimePublicKey!)
+        }else {
+            //需要先用pin码做两次sha256以后调用方法deCrypt3des解密oneTimeSignature得到R和S，然后调用方法toCanonicalised得到最后的S值，调用getRecId得到recId
+        }
+        
+        
         //test
         //        let pin = "123456"
         //        let pinSha256 = sha256(data: pin.data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!).hexEncodedString()
@@ -69,6 +87,56 @@ public class Utils:NSObject{
         //        let checkSumSignature = crc16(buf: deriveSignatureData!)
         //        let checkSumPrivate = crc16(buf: oneTimePrivateKeyData!)
         return card
+    }
+    
+    static func toCanonicalised(s:String) -> String {
+        let bnN = BigInt("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141",radix:16)
+        let halfN = BigInt("7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D576E7357A4501DDFE92F46681B20A0",radix:16)
+        var bnS = BigInt(s,radix:16)
+        if(bnS>halfN){
+            bnS = bnN - bnS
+            s = String(bnS, radix: 16, uppercase: true)
+        }
+        
+        return s
+    }
+    
+    static func getRecId(oneTimeNonce:String, r:String, s:String, onTimePublicKey:String) -> Int {
+        var recId = 0
+        let hashHexString = oneTimeNonce+onTimePublicKey
+        let hashSha256 = sha256(data: hashHexString.data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!).hexEncodedString()
+        let hashDBSha256 = sha256(data: hashSha256.data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!).hexEncodedString()
+        for i in 0 ..< 4{
+            var rec = "00"
+            if(i==0){
+                rec = "00"
+            }else if(i==1){
+                rec = "01"
+            }else if(i==2){
+                rec = "02"
+            }else if(i==3){
+                rec = "03"
+            }
+            let sig = r + s
+            sig = sig + rec
+            var signature = dataWithHexString(hex: sig)
+            let hashData = dataWithHexString(hex: hashDBSha256)
+            if signature.count != 65 { return ""}
+            let rData = signature[0..<32].bytes
+            let sData = signature[32..<64].bytes
+            let vData = signature[64]
+            guard let signatureData = SECP256K1.marshalSignature(v: vData, r: rData, s: sData) else {return 0}
+            var hash: Data
+            hash = hashData
+            guard let publicKey = SECP256K1.recoverPublicKey(hash: hash, signature: signatureData) else {return 0}
+            let recoverPublicKey = publicKey.hexEncodedString()
+            if(recoverPublicKey==onTimePublicKey){
+                recId = i
+                break
+            }
+            
+        }
+        return recId
     }
     
     //crc16

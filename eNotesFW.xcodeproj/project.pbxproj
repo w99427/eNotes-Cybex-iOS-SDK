@@ -8,38 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		57132D33222636BA00A41B2F /* eNotesFW.h in Headers */ = {isa = PBXBuildFile; fileRef = 57132D31222636BA00A41B2F /* eNotesFW.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		57132D552227D31500A41B2F /* eNotesFW-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 57132D542227D31500A41B2F /* eNotesFW-Bridging-Header.h */; };
-		57132D622227D3A500A41B2F /* Data+Extension1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D562227D3A400A41B2F /* Data+Extension1.swift */; };
-		57132D632227D3A500A41B2F /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D572227D3A400A41B2F /* Array+Extension.swift */; };
-		57132D642227D3A500A41B2F /* ASN1Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D582227D3A400A41B2F /* ASN1Identifier.swift */; };
-		57132D652227D3A500A41B2F /* Asn1Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D592227D3A400A41B2F /* Asn1Decoder.swift */; };
-		57132D662227D3A500A41B2F /* Tlv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D5A2227D3A400A41B2F /* Tlv.swift */; };
-		57132D672227D3A500A41B2F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D5B2227D3A400A41B2F /* Card.swift */; };
-		57132D682227D3A500A41B2F /* TlvTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D5C2227D3A400A41B2F /* TlvTag.swift */; };
-		57132D692227D3A500A41B2F /* ASN1Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D5D2227D3A400A41B2F /* ASN1Object.swift */; };
-		57132D6A2227D3A500A41B2F /* Cert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D5E2227D3A400A41B2F /* Cert.swift */; };
-		57132D6B2227D3A500A41B2F /* CertificateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D5F2227D3A500A41B2F /* CertificateParser.swift */; };
-		57132D6C2227D3A500A41B2F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D602227D3A500A41B2F /* Utils.swift */; };
-		57132D6D2227D3A500A41B2F /* X509Certificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D612227D3A500A41B2F /* X509Certificate.swift */; };
+		57132D7A2227E4F100A41B2F /* TlvTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D6E2227E4F100A41B2F /* TlvTag.swift */; };
+		57132D7B2227E4F100A41B2F /* Tlv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D6F2227E4F100A41B2F /* Tlv.swift */; };
+		57132D7C2227E4F100A41B2F /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D702227E4F100A41B2F /* Data+Extension.swift */; };
+		57132D7D2227E4F100A41B2F /* ASN1Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D712227E4F100A41B2F /* ASN1Identifier.swift */; };
+		57132D7E2227E4F100A41B2F /* X509Certificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D722227E4F100A41B2F /* X509Certificate.swift */; };
+		57132D7F2227E4F100A41B2F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D732227E4F100A41B2F /* Card.swift */; };
+		57132D802227E4F100A41B2F /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D742227E4F100A41B2F /* Array+Extension.swift */; };
+		57132D812227E4F100A41B2F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D752227E4F100A41B2F /* Utils.swift */; };
+		57132D822227E4F100A41B2F /* Cert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D762227E4F100A41B2F /* Cert.swift */; };
+		57132D832227E4F100A41B2F /* ASN1Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D772227E4F100A41B2F /* ASN1Object.swift */; };
+		57132D842227E4F100A41B2F /* CertificateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D782227E4F100A41B2F /* CertificateParser.swift */; };
+		57132D852227E4F100A41B2F /* Asn1Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132D792227E4F100A41B2F /* Asn1Decoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		57132D2E222636BA00A41B2F /* eNotesFW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = eNotesFW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57132D31222636BA00A41B2F /* eNotesFW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = eNotesFW.h; sourceTree = "<group>"; };
 		57132D32222636BA00A41B2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		57132D542227D31500A41B2F /* eNotesFW-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "eNotesFW-Bridging-Header.h"; sourceTree = "<group>"; };
-		57132D562227D3A400A41B2F /* Data+Extension1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Extension1.swift"; sourceTree = "<group>"; };
-		57132D572227D3A400A41B2F /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Extension.swift"; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/Array+Extension.swift"; sourceTree = "<group>"; };
-		57132D582227D3A400A41B2F /* ASN1Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ASN1Identifier.swift; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/ASN1Identifier.swift"; sourceTree = "<group>"; };
-		57132D592227D3A400A41B2F /* Asn1Decoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Asn1Decoder.swift; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/Asn1Decoder.swift"; sourceTree = "<group>"; };
-		57132D5A2227D3A400A41B2F /* Tlv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tlv.swift; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/Tlv.swift"; sourceTree = "<group>"; };
-		57132D5B2227D3A400A41B2F /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Card.swift; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/Card.swift"; sourceTree = "<group>"; };
-		57132D5C2227D3A400A41B2F /* TlvTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TlvTag.swift; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/TlvTag.swift"; sourceTree = "<group>"; };
-		57132D5D2227D3A400A41B2F /* ASN1Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ASN1Object.swift; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/ASN1Object.swift"; sourceTree = "<group>"; };
-		57132D5E2227D3A400A41B2F /* Cert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cert.swift; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/Cert.swift"; sourceTree = "<group>"; };
-		57132D5F2227D3A500A41B2F /* CertificateParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CertificateParser.swift; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/CertificateParser.swift"; sourceTree = "<group>"; };
-		57132D602227D3A500A41B2F /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/Utils.swift"; sourceTree = "<group>"; };
-		57132D612227D3A500A41B2F /* X509Certificate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = X509Certificate.swift; path = "../../../../../test/iOS11-NFC-Example-master/NFC-Example/Libs/X509Certificate.swift"; sourceTree = "<group>"; };
+		57132D6E2227E4F100A41B2F /* TlvTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TlvTag.swift; sourceTree = "<group>"; };
+		57132D6F2227E4F100A41B2F /* Tlv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tlv.swift; sourceTree = "<group>"; };
+		57132D702227E4F100A41B2F /* Data+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		57132D712227E4F100A41B2F /* ASN1Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASN1Identifier.swift; sourceTree = "<group>"; };
+		57132D722227E4F100A41B2F /* X509Certificate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = X509Certificate.swift; sourceTree = "<group>"; };
+		57132D732227E4F100A41B2F /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		57132D742227E4F100A41B2F /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		57132D752227E4F100A41B2F /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		57132D762227E4F100A41B2F /* Cert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cert.swift; sourceTree = "<group>"; };
+		57132D772227E4F100A41B2F /* ASN1Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASN1Object.swift; sourceTree = "<group>"; };
+		57132D782227E4F100A41B2F /* CertificateParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CertificateParser.swift; sourceTree = "<group>"; };
+		57132D792227E4F100A41B2F /* Asn1Decoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asn1Decoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,19 +70,18 @@
 		57132D30222636BA00A41B2F /* eNotesFW */ = {
 			isa = PBXGroup;
 			children = (
-				57132D572227D3A400A41B2F /* Array+Extension.swift */,
-				57132D592227D3A400A41B2F /* Asn1Decoder.swift */,
-				57132D582227D3A400A41B2F /* ASN1Identifier.swift */,
-				57132D5D2227D3A400A41B2F /* ASN1Object.swift */,
-				57132D5B2227D3A400A41B2F /* Card.swift */,
-				57132D5E2227D3A400A41B2F /* Cert.swift */,
-				57132D5F2227D3A500A41B2F /* CertificateParser.swift */,
-				57132D562227D3A400A41B2F /* Data+Extension1.swift */,
-				57132D5A2227D3A400A41B2F /* Tlv.swift */,
-				57132D5C2227D3A400A41B2F /* TlvTag.swift */,
-				57132D602227D3A500A41B2F /* Utils.swift */,
-				57132D612227D3A500A41B2F /* X509Certificate.swift */,
-				57132D542227D31500A41B2F /* eNotesFW-Bridging-Header.h */,
+				57132D742227E4F100A41B2F /* Array+Extension.swift */,
+				57132D792227E4F100A41B2F /* Asn1Decoder.swift */,
+				57132D712227E4F100A41B2F /* ASN1Identifier.swift */,
+				57132D772227E4F100A41B2F /* ASN1Object.swift */,
+				57132D732227E4F100A41B2F /* Card.swift */,
+				57132D762227E4F100A41B2F /* Cert.swift */,
+				57132D782227E4F100A41B2F /* CertificateParser.swift */,
+				57132D702227E4F100A41B2F /* Data+Extension.swift */,
+				57132D6F2227E4F100A41B2F /* Tlv.swift */,
+				57132D6E2227E4F100A41B2F /* TlvTag.swift */,
+				57132D752227E4F100A41B2F /* Utils.swift */,
+				57132D722227E4F100A41B2F /* X509Certificate.swift */,
 				57132D31222636BA00A41B2F /* eNotesFW.h */,
 				57132D32222636BA00A41B2F /* Info.plist */,
 			);
@@ -98,7 +95,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57132D552227D31500A41B2F /* eNotesFW-Bridging-Header.h in Headers */,
 				57132D33222636BA00A41B2F /* eNotesFW.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,18 +167,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57132D672227D3A500A41B2F /* Card.swift in Sources */,
-				57132D622227D3A500A41B2F /* Data+Extension1.swift in Sources */,
-				57132D652227D3A500A41B2F /* Asn1Decoder.swift in Sources */,
-				57132D682227D3A500A41B2F /* TlvTag.swift in Sources */,
-				57132D6B2227D3A500A41B2F /* CertificateParser.swift in Sources */,
-				57132D692227D3A500A41B2F /* ASN1Object.swift in Sources */,
-				57132D6C2227D3A500A41B2F /* Utils.swift in Sources */,
-				57132D6D2227D3A500A41B2F /* X509Certificate.swift in Sources */,
-				57132D632227D3A500A41B2F /* Array+Extension.swift in Sources */,
-				57132D662227D3A500A41B2F /* Tlv.swift in Sources */,
-				57132D642227D3A500A41B2F /* ASN1Identifier.swift in Sources */,
-				57132D6A2227D3A500A41B2F /* Cert.swift in Sources */,
+				57132D7B2227E4F100A41B2F /* Tlv.swift in Sources */,
+				57132D7F2227E4F100A41B2F /* Card.swift in Sources */,
+				57132D7D2227E4F100A41B2F /* ASN1Identifier.swift in Sources */,
+				57132D832227E4F100A41B2F /* ASN1Object.swift in Sources */,
+				57132D7A2227E4F100A41B2F /* TlvTag.swift in Sources */,
+				57132D852227E4F100A41B2F /* Asn1Decoder.swift in Sources */,
+				57132D802227E4F100A41B2F /* Array+Extension.swift in Sources */,
+				57132D7C2227E4F100A41B2F /* Data+Extension.swift in Sources */,
+				57132D7E2227E4F100A41B2F /* X509Certificate.swift in Sources */,
+				57132D822227E4F100A41B2F /* Cert.swift in Sources */,
+				57132D812227E4F100A41B2F /* Utils.swift in Sources */,
+				57132D842227E4F100A41B2F /* CertificateParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

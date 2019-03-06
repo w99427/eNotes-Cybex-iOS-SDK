@@ -35,7 +35,10 @@ public struct Card {
     public var oneTimeSignatureChecksum = 0
     public var oneTimePrivateKeyChecksum = 0
     public var account = ""
-    public var transactionPinStatus = ""
+    public var transactionPinStatus = 0
+    public var r = ""
+    public var s = ""
+    public var recId = 0
     public var cert = Cert()
     
 }

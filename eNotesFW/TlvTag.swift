@@ -7,15 +7,15 @@
 //
 
 import Foundation
-
-let Device_Certificate = "30";
-let  Account = "32"
-let  BlockChain_PublicKey = "55"
-let  OneTime_PrivateKey = "56"
-let  OneTime_PublicKey = "57"
-let  OneTime_Nonce  = "74"
-let  OneTime_Signature = "75"
-let  TransactionPinStatus = "94"
-let  OneTime_SignatureChecksum = "b1"
-let  OneTime_PrivateKeyChecksum = "b0"
-
+public struct TlvTag{
+    let Device_Certificate = "30";
+    let  Account = "32"
+    let  BlockChain_PublicKey = "55"
+    let  OneTime_PrivateKey = "56"
+    let  OneTime_PublicKey = "57"
+    let  OneTime_Nonce  = "74"
+    let  OneTime_Signature = "75"
+    let  TransactionPinStatus = "94"
+    let  OneTime_SignatureChecksum = "b1"
+    let  OneTime_PrivateKeyChecksum = "b0"
+}
