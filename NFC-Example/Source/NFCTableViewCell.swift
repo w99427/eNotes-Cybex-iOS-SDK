@@ -1,10 +1,3 @@
-//
-//  NFCTableViewCell.swift
-//  NFC-Example
-//
-//  Created by Hans Knöchel on 12.06.17.
-//  Copyright © 2017 Hans Knoechel. All rights reserved.
-//
 
 import UIKit
 

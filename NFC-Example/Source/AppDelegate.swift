@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  NFC-Example
-//
-//  Created by Hans Knöchel on 08.06.17.
-//  Copyright © 2017 Hans Knoechel. All rights reserved.
-//
 
 import UIKit
 
