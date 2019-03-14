@@ -75,26 +75,26 @@ public class Utils:NSObject{
         }else {
             //需要先用pin码做一次sha256以后调用方法deCrypt3des解密oneTimeSignature得到R和S，然后调用方法toCanonicalised得到最后的S值，调用getRecId得到recId
             
-                    //test
-                            let pin = "123456"
-                            let pinSha256 = sha256(data: pin.data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!).hexEncodedString()
-                            let deCodeSignature = deCrypt3des(coding: oneTimeSignatureData!, pin: pinSha256)
-                            let checkSumSignature = crc16(buf: dataWithHexString(hex: deCodeSignature))
-            
-                    let deCodePrivate = deCrypt3des(coding: oneTimePrivateKeyData!, pin: pinSha256)
-                    let checkSumPrivate = crc16(buf: dataWithHexString(hex: deCodePrivate))
-//             if(checkSumSignature == oneTimeSignatureChecksum && checkSumPrivate == oneTimePrivateKeyChecksum)
-//                  pin is right
-                    let r = (deCodeSignature as NSString).substring(to: 64)
-                    let s = (deCodeSignature as NSString).substring(with: NSMakeRange(64, 64))
-            
-                    card.r = r
-                    card.s = toCanonicalised(s: s)
-             do{
-                card.recId = try getRecId(oneTimeNonce: oneTimeNonce!, r: r, s: s, onTimePublicKey: oneTimePublicKey!, blockchainPublicKey:blockchainPublicKey!)
-             }catch{
-                
-            }
+            //test 由于需要外部输入pin码，需要手动触发以下步骤
+//            let pin = "123456"
+//            let pinSha256 = sha256(data: pin.data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!).hexEncodedString()
+//            let deCodeSignature = deCrypt3des(coding: oneTimeSignatureData!, pin: pinSha256)
+//            let checkSumSignature = crc16(buf: dataWithHexString(hex: deCodeSignature))
+//
+//            let deCodePrivate = deCrypt3des(coding: oneTimePrivateKeyData!, pin: pinSha256)
+//            let checkSumPrivate = crc16(buf: dataWithHexString(hex: deCodePrivate))
+//            //             if(checkSumSignature == oneTimeSignatureChecksum && checkSumPrivate == oneTimePrivateKeyChecksum)
+//            //                  pin is right
+//            let r = (deCodeSignature as NSString).substring(to: 64)
+//            let s = (deCodeSignature as NSString).substring(with: NSMakeRange(64, 64))
+//
+//            card.r = r
+//            card.s = toCanonicalised(s: s)
+//            do{
+//                card.recId = try getRecId(oneTimeNonce: oneTimeNonce!, r: r, s: s, onTimePublicKey: oneTimePublicKey!, blockchainPublicKey:blockchainPublicKey!)
+//            }catch{
+//
+//            }
         }
         return card
     }
